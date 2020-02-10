@@ -1,8 +1,8 @@
-<h1>Characters for <%= house %></h1>
-<h3>Number of Members: <%= members.count %></h3>
+<h1>Characters for <%= member_search.house %></h1>
+<h3>Number of Members: <%= member_search.number_of_members %></h3>
 
 <section class = "members">
-  <% @members.each do |member| %>
+  <% member_search.members.each do |member| %>
     <section class = "member_info">
       <p>Name: <%= member.name %></p>
       <p>Role: <%= member.role %></p>
