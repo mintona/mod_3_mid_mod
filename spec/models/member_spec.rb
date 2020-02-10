@@ -6,7 +6,6 @@ RSpec.describe Member do
       name: "Aberforth Dumbledore",
       house: "Gryffindor",
       role: "Owner, Hog's Head Inn",
-      # order_of_the_phoenix: true,
       patronus: "goat"
     }
     member = Member.new (member_info)

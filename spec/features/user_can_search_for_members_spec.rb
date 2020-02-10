@@ -34,7 +34,6 @@ RSpec.describe "As a user" do
       expect(page).to have_content("Name")
       expect(page).to have_content("Sirius Black")
       expect(page).to have_content("Role")
-      # expect(page).to have_content("Student")
       expect(page).to have_content("House")
       expect(page).to have_content("Gryffindor")
       expect(page).to have_content("Patronus")
