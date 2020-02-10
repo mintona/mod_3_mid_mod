@@ -1,15 +1,19 @@
 class HarryPotterSearch
-  attr_reader :state
+  attr_reader :house
 
   def initialize(house)
     @house = house
   end
 
   def members
-    return @members if @members
     service = HarryPotterService.new
-    @members = service.members_by_house(house).map do |member_data|
-      Member.new(member_data)
+
+    @members = service.get_members_by_house(@house).map do |member_info|
+      Member.new(member_info)
     end
+  end
+
+  def number_of_members
+    members.count
   end
 end
