@@ -6,7 +6,7 @@ RSpec.describe Member do
       name: "Aberforth Dumbledore",
       house: "Gryffindor",
       role: "Owner, Hog's Head Inn",
-      order_of_the_phoenix: true,
+      # order_of_the_phoenix: true,
       patronus: "goat"
     }
     member = Member.new (member_info)
@@ -23,7 +23,6 @@ RSpec.describe Member do
     member_info = {
       name: "Siruis Black",
       house: "Gryffindor",
-
     }
 
     member = Member.new(member_info)
@@ -31,5 +30,7 @@ RSpec.describe Member do
     expect(member).to be_a Member
     expect(member.name).to eq("Siruis Black")
     expect(member.house).to eq("Gryffindor")
+    expect(member.role).to eq(nil)
+    expect(member.patronus).to eq(nil)
   end
 end
