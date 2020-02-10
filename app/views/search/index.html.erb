@@ -1,0 +1,13 @@
+<h1>Characters for <%= house.name %></h1>
+<h3>Number of Members: <%= house.member_count %></h3>
+
+<section class = "members">
+  <% house.members.each do |member| %>
+    <section class = "member_info">
+      <p>Name: <%= member.name %></p>
+      <p>Role: <%= member.role %></p>
+      <p>House: <%= member.house %></p>
+      <p>Patronus: <%= member.patronus %></p>
+    </section>
+  <% end %>
+</section>
