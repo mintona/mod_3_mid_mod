@@ -27,14 +27,14 @@ RSpec.describe "As a user" do
     expect(page).to have_css(".members")
 
     within(".members") do
-      expect(page).to have_css(".member_info") #21 times
+      expect(page).to have_css(".member_info", count: 21)
     end
 
-    within(".member_info").first do
+    within(first(".member_info")) do
       expect(page).to have_content("Name")
-      expect(page).to have_content("Katie Bell")
+      expect(page).to have_content("Sirius Black")
       expect(page).to have_content("Role")
-      expect(page).to have_content("Student")
+      # expect(page).to have_content("Student")
       expect(page).to have_content("House")
       expect(page).to have_content("Gryffindor")
       expect(page).to have_content("Patronus")
